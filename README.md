@@ -2,8 +2,7 @@
 ##Simplest possible JAX-RS REST server
 
 ```
-mvn clean install
-mvn jetty:run
+mvn jetty:run -DskipTests
 ```
 
 This will build a WAR and run it with embedded Jetty
@@ -39,8 +38,10 @@ http://localhost:8080/services/customers
 
 Advanced:
 I find I can run the junit tests (which use RestEasy) if I do the following in one terminal:
-`mvn jetty:run`
-and in the other terminal, run the tests (I use eclipse to run them).
+`mvn jetty:run -DskipTests`
+and in the other terminal, run the tests,
+`mvn test`
+(I use eclipse to run them).
 
 The intention of this is to get you running with a basic system.  The motivation is to create an environment that works so that you can do the examples in the JAX-RS Java book.
 RESTful Java with JAX-RS 2.0 (Second Edition)
